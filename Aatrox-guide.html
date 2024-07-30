@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aatrox Guide - DekuStarts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Лого">
+            </a>
+        </div>
+        <nav class="quick-links-grid">
+            <a href="Wild-core.html" class="quick-link-card">Wild Core</a>
+            <a href="champion-builds.html" class="quick-link-card">Champion Builds</a>
+            <a href="tier-list.html" class="quick-link-card">Tier List</a>
+            <a href="runes-tier-list.html" class="quick-link-card">Rune List</a>
+            <a href="items-tier-list.html" class="quick-link-card">Item List</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h4>Champion Build Guide By Deku</h4>
+        </div>
+        <div class="search-container">
+            <input type="text" name="home-search" id="search" class="wf-home__search__input" placeholder="Бүх Champion-уудыг хайх..." oninput="searchChampions()">
+            <div id="search-results"></div>
+        </div>
+        <section id="aatrox-guide">
+            <div id="aatrox-guide">
+                <div class="wf-champion wm">
+                    <input type="hidden" id="patch" value="5.2">
+                    <input type="hidden" id="champion_id" value="114">
+                    <div class="wf-champion__about">
+                        <div class="wf-champion__about__stats">
+                            <div class="wf-champion__about__stats__header">
+                                <div>
+                                    <span>Statistics</span>
+                                    <span class="level">Lvl 1</span>
+                                    <div class="range-wrap">
+                                        <div class="range-value" id="rangeV"></div>
+                                        <input id="range" type="range" min="1" max="15" value="1" step="1">
+                                    </div>
+                                    <span class="level">Lvl 15</span>
+                                </div>
+                                <span class="hide-champ-stats"><i class="fas fa-chevron-up"></i> Hide Champ Stats</span>
+                            </div>
+                            <div class="wf-champion__about__stats__main">
+                                <div class="statsBlock champion">
+                                    <h2>Level <span id="stat-level">1</span> Aatrox Stats</h2>
+                                    <div class="statsBlock__block">
+                                        <span class="name"><img src="/images/stats/health.png" alt> Health</span>
+                                        <span class="value" data-base="600" data-increase="95">600</span>
+                                    </div>
+                                    <div class="statsBlock__block">
+                                        <span class="name"><img src="/images/stats/health-regeneration.png" alt> Health Reg. (5s)</span>
+                                        <span class="value" data-base="6" data-increase="1">6</span>
+                                    </div>
+                                    <div class="statsBlock__block">
+                                        <span class="name"><img src="/images/stats/armor.png" alt> Armor</span>
+                                        <span class="value" data-base="40" data-increase="4">40</span>
+                                    </div>
+                                    <div class="statsBlock__block">
+                                        <span class="name"><img src="/images/stats/magic-resistance.png" alt> Magic Res.</span>
+                                        <span class="value" data-base="40" data-increase="2">40</span>
+                                    </div>
+                                    <div class="statsBlock__block">
+                                        <span class="name"><img src="/images/stats/movement-speed.png" alt> Move Speed</span>
+                                        <span class="value" data-base="355" data-increase="0">355</span>
+                                    </div>
+                                    <div class="statsBlock__block">
+                                        <span class="name"><img src="/images/stats/attack-damage.png" alt> Attack Dmg.</span>
+                                        <span class="value" data-base="62" data-increase="5">62</span>
+                                    </div>
+                                    <div class="statsBlock__block">
+                                        <span class="name"><img src="/images/stats/attack-speed.png" alt> Attack Spd.</span>
+                                        <span class="value" data-base="0.73" data-increase="0.0079">0.73</span>
+                                    </div>
+                                </div>
+                                <div class="statsBlock abilities">
+                                    <h2>Aatrox's Abilities</h2>
+                                    <div id="ability-wrap" class="mCustomScrollbar" data-mcs-theme="rounded-dark">
+                                        <div class="statsBlock__block">
+                                            <div class="upper">
+                                                <img src="https://www.mobafire.com/images/ability/aatrox-deathbringer-stance.png" alt>
+                                                <div class="info">
+                                                    <div class="name"><span>P</span>Deathbringer Stance</div>
+                                                </div>
+                                            </div>
+                                            <div class="lower">
+                                                <p>Enhances his next attack every 24 seconds to deal bonus <b><font color="#dd4800">5 - 15% physical damage</font></b> of the target's maximum Health and <b><font color="#56c17f">heals</font></b> himself for the same amount.</p>
+                                                <p>Deathbringer Stance's cooldown is reduced by 3 seconds when Aatrox hits a Champion or large monster with an attack or ability.</p>
+                                                <p>Max <b>50</b> damage against monsters.</p>
+                                                <p>Healing reduced to <b>60%</b> against minions.</p>
+                                            </div>
+                                        </div>
+                                        <div class="statsBlock__block">
+                                            <div class="upper">
+                                                <img src="https://www.mobafire.com/images/ability/aatrox-the-darkin-blade.png" alt>
+                                                <div class="info">
+                                                    <div class="name"><span>1</span>The Darkin Blade</div>
+                                                    <div class="cooldown">Cooldown:
+                                                        <span>13</span> /
+                                                        <span>11</span> /
+                                                        <span>9</span> /
+                                                        <span>7</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lower">
+                                                <p>Swings his giant blade, dealing <b><font color="#dd4800">15 / 45 / 75 / 105</font></b> (<b><font color="#eb8d34">+70% / 75% / 70% / 85% AD</font></b>) <font color="#dd4800"><b>physical damage</b></font>. This ability can be cast 2 more times, with each cast dealing <b>25%</b> more damage.</p>
+                                                <p>Enemies hit on the sweetspot will be knocked airborne for 0.25 seconds and dealt <b>50%</b> bonus damage.</p>
+                                                <p>Deals <b>65%</b> damage to minions.<br>Deals <b>70%</b> damage to monsters.</p>
+                                            </div>
+                                        </div>
+                                        <div class="statsBlock__block">
+                                            <div class="upper">
+                                                <img src="https://www.mobafire.com/images/ability/aatrox-infernal-chains.png" alt>
+                                                <div class="info">
+                                                    <div class="name"><span>2</span>Infernal Chains</div>
+                                                    <div class="cooldown">Cooldown:
+                                                        <span>15</span> /
+                                                        <span>14</span> /
+                                                        <span>13</span> /
+                                                        <span>12</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lower">
+                                                <p>Sends a chain dealing <b><font color="#dd4800">25 / 40 / 55 / 70</font></b> (<b><font color="#eb8d34">+40% AD</font></b>) <font color="#dd4800"><b>physical damage</b></font> to the first enemy hit and slowing them by <b>25%</b> for 1.5 seconds.</p>
+                                                <p>If a champion or large monster remains within the impact area after 1.5 seconds, they will be dragged back to the center and take the same damage again.</p>
+                                                <p>Deals double damage to minions.</p>
+                                            </div>
+                                        </div>
+                                        <div class="statsBlock__block">
+                                            <div class="upper">
+                                                <img src="https://www.mobafire.com/images/ability/aatrox-umbral-dash.png" alt>
+                                                <div class="info">
+                                                    <div class="name"><span>3</span>Umbral Dash</div>
+                                                    <div class="cooldown">Cooldown:
+                                                        <span>8</span> /
+                                                        <span>7</span> /
+                                                        <span>6</span> /
+                                                        <span>5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lower">
+                                                <p><b>Passive</b>: Aatrox gains <b>19% / 21% / 23% / 25% physical vamp</b> against enemy champions.</p>
+                                                <p><b>Active</b>: Dashes forward. This resets Aatrox's normal attack. Usable while casting other abilities.</p>
+                                            </div>
+                                        </div>
+                                        <div class="statsBlock__block">
+                                            <div class="upper">
+                                                <img src="https://www.mobafire.com/images/ability/aatrox-world-ender.png" alt>
+                                                <div class="info">
+                                                    <div class="name"><span>4</span>World Ender</div>
+                                                    <div class="cooldown">Cooldown:
+                                                        <span>75</span> /
+                                                        <span>65</span> /
+                                                        <span>55</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lower">
+                                                <p>Unleashes his demonic form for 10 seconds, gaining <b>30% / 40% / 50% <font color="#eb8d34">Attack Damage</font></b>, <b>25% / 35% / 45%</b> <b><font color="#56c17f">increased healing</font></b> and <b>60% / 80% / 100%</b> decaying <b>Movement Speed</b>. During this time, Umbral Dash's Physical Vamp is increased by <b>50%</b>.</p>
+                                                <p>World Ender's duration is extended by 5 seconds with a takedown, up to 10 extra seconds.</p>
+                                                <p>Nearby minions and monsters are feared for 3 seconds on activation.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer id="foot-list">
+        <div class="footer-list">
+            <h3>League of Legends: Wild Rift бусад Champion Guide</h3>
+            <div class="footer-links">
+                <a href="#">Aatrox</a>
+                <a href="#">Ahri</a>
+                <a href="#">Akali</a>
+                <a href="#">Alistar</a>
+                <a href="#">Amumu</a>
+                <a href="#">Annie</a>
+                <a href="#">Ashe</a>
+                <a href="#">Aurelion Sol</a>
+                <a href="#">Blitzcrank</a>
+                <a href="#">Brand</a>
+                <a href="#">Braum</a>
+                <a href="#">Caitlyn</a>
+                <a href="#">Camille</a>
+                <a href="#">Corki</a>
+                <a href="#">Darius</a>
+                <a href="#">Diana</a>
+                <a href="#">Draven</a>
+                <a href="#">Dr. Mundo</a>
+                <a href="#">Ekko</a>
+                <a href="#">Evelynn</a>
+                <a href="#">Ezreal</a>
+                <a href="#">Fiora</a>
+                <a href="#">Fizz</a>
+                <a href="#">Galio</a>
+                <a href="#">Garen</a>
+                <a href="#">Gragas</a>
+                <a href="#">Graves</a>
+                <a href="#">Irelia</a>
+                <a href="#">Janna</a>
+                <a href="#">Jax</a>
+                <a href="#">Jayce</a>
+                <a href="#">Jhin</a>
+                <a href="#">Jinx</a>
+                <a href="#">Kaisa</a>
+                <a href="#">Kennen</a>
+                <a href="#">Lee Sin</a>
+                <a href="#">Lux</a>
+                <a href="#">Malphite</a>
+                <a href="#">Master Yi</a>
+                <a href="#">Miss Fortune</a>
+                <a href="#">Nasus</a>
+                <a href="#">Olaf</a>
+                <a href="#">Orianna</a>
+                <a href="#">Rengar</a>
+                <a href="#">Riven</a>
+                <a href="#">Seraphine</a>
+                <a href="#">Shen</a>
+                <a href="#">Shyvana</a>
+                <a href="#">Singed</a>
+                <a href="#">Sona</a>
+                <a href="#">Soraka</a>
+                <a href="#">Teemo</a>
+                <a href="#">Tristana</a>
+                <a href="#">Tryndamere</a>
+                <a href="#">Twisted Fate</a>
+                <a href="#">Varus</a>
+                <a href="#">Vayne</a>
+                <a href="#">Vi</a>
+                <a href="#">Wukong</a>
+                <a href="#">Yasuo</a>
+                <a href="#">Zed</a>
+                <a href="#">Ziggs</a>
+            </div>
+            <a href="tier-list.html" class="tier-list">Tier List Үзэх</a>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Бидний тухай</h3>
+                    <p>Wild Rift хөгжүүлэх зорилготой хувь хөгжүүлэгч.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Холбоо барих</h3>
+                    <p>E-mail: dekustartswild@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Биднийг дага</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100094681824960" class="social-icon" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dekustarts/" class="social-icon" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/8vUDDtLtSGWZnAKQ/" class="social-icon" target="_blank">
+                            <i class="fab fa-users"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 DekuStarts Wild Rift. Бүх эрх хуулиар хамгаалагдсан.</p>
+            </div>
+        </footer>
+        <div id="footer">
+        </div>
+    </footer>
+    <script src="aatrox.js">
+</script>    
+</body>
+</html>
