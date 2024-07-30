@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DekuStarts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Лого">
+            </a>
+        </div>
+        <nav class="quick-links-grid">
+            <a href="Wild-core.html" class="quick-link-card">Wild Core</a>
+            <a href="champion-builds.html" class="quick-link-card">Champion Builds</a>
+            <a href="tier-list.html" class="quick-link-card">Tier List</a>
+            <a href="runes-tier-list.html" class="quick-link-card">Rune List</a>
+            <a href="items-tier-list.html" class="quick-link-card">Item List</a>
+        </nav>
+    </header>
+    <main>
+        <section id="news">
+            <h2>Мэдээлэл</h2>
+            <div class="news-grid">
+                <!-- News Article 1 -->
+                <div class="news-card">
+                    <a href="https://wildrift.leagueoflegends.com/en-us/news/game-updates/key-learnings-from-beyond-ruination/">
+                        <div class="news-image-container">
+                            <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/88cc6c41064ffb5be9a95e87ccb2dcad4acf1b70-1920x1080.jpg?auto=format&amp;fit=fill&amp;q=100&amp;w=600" alt="Key Learnings from Beyond Ruination">
+                        </div>
+                        <div class="news-content">
+                            <p class="news-date" data-category="Тоглоомны өөрчилөлт" data-published="2024-07-23">Тоглоомын өөрчилөлт</p>
+                            <h3>Key Learnings from Beyond Ruination</h3>
+                            <p>Sit back and reflect with us on patch 5.1.</p>
+                            <span class="read-more">Цааш</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- News Article 2 -->
+                <div class="news-card">
+                    <a href="https://www.youtube.com/watch?v=nmS0qfhn-tQ">
+                        <div class="news-image-container">
+                            <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/70ab4331f023e3e2c9616aaafdaff44d802e4e14-1920x1080.jpg?auto=format&fit=fill&q=100&w=600" alt="Dev Update: Heightened Hexperience">
+                        </div>
+                        <div class="news-content">
+                            <p class="news-date" data-category="Хөгжүүлэгч" data-published="2024-07-21">Хөгжүүлэгч</p>
+                            <h3>Dev Update: Heightened Hexperience</h3>
+                            <p>Join us for an outlook on what more hexciting things to expect and celebrate this year! #HexRift.</p>
+                            <span class="read-more">Цааш</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- News Article 3 -->
+                <div class="news-card">
+                    <a href="https://www.youtube.com/watch?v=iC0bms_En58">
+                        <div class="news-image-container">
+                            <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/cc8f49335377f0c947000d5dde094bee1bcfa110-1920x1080.jpg?auto=format&fit=fill&q=100&w=600" alt="The Hexolution is coming to Wild Rift!">
+                        </div>
+                        <div class="news-content">
+                            <p class="news-date" data-category="Тоглоомны өөрчилөлт" data-published="2024-07-19">Тоглоомны өөрчилөлт</p>
+                            <h3>The Hexolution is coming to Wild Rift!</h3>
+                            <p>Get even wilder with the new Rift. Coming to you on July 18th UTC! #HexRift.</p>
+                            <span class="read-more">Цааш</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Бидний тухай</h3>
+                <p>Wild Rift хөгжүүлэх зорилготой хувь хөгжүүлэгч.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Холбоо барих</h3>
+                <p>E-mail: dekustartswild@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Биднийг дага</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100094681824960" class="social-icon" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/dekustarts/" class="social-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/8vUDDtLtSGWZnAKQ/" class="social-icon" target="_blank">
+                        <i class="fab fa-users"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 DekuStarts Wild Rift. Бүх эрх хуулиар хамгаалагдсан.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    function updateDates() {
+        const dates = document.querySelectorAll('.news-date');
+        const now = new Date();
+    
+        dates.forEach(date => {
+            const publishedDate = new Date(date.dataset.published);
+            const diffTime = Math.abs(now - publishedDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+            let timeAgo;
+            if (diffDays === 1) {
+                timeAgo = 'yesterday';
+            } else if (diffDays <= 7) {
+                timeAgo = diffDays + ' өдрийн өмнө';
+            } else {
+                timeAgo = 'өнгөрсөн долоо хоногт';
+            }
+    
+            date.textContent = `${date.dataset.category} ${timeAgo}`;
+        });
+    }
+    
+    // Run the function when the page loads
+    document.addEventListener('DOMContentLoaded', updateDates);
+    </script>
+</html>
